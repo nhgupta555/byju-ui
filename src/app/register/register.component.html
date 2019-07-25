@@ -1,0 +1,80 @@
+  <!-- Header starts here -->
+  <header id="Header">
+      <nav class="main-navigation">
+          <div class="container clearfix">
+              <p style="text-align: center; color: white"> 
+                  <strong><h2>Welcome to Byju - Think And Learn</h2></strong> 
+              </p>
+          </div>
+      </nav>
+  </header>
+  <!-- Header ends here -->
+
+   <!-- Banner starts here -->
+   <section id="HeroBanner">
+      <div class="hero-content">
+          <body style="margin-top:100px; margin-bottom: 100px; background: none;">
+              <div style="width:400px;float:center;margin-left:35%;margin-top:5%"> 
+                <form [formGroup]="signupForm" (ngSubmit)="register()" >
+                  <div class="container">
+                  
+                      <p style="text-align: center"> 
+                          <strong><h2>User Registration</h2></strong> 
+                      </p>
+            
+                      <strong>
+                          <label style="color: white;">Username:</label>
+                          <input type="text"  class="form-control" formControlName = "username" placeholder="Enter the username" />
+                          <span *ngIf = "!signupForm.get('username').valid && signupForm.get('username').touched" class ="help-block">
+                              Please enter a valid username.
+                            </span><br/><br/>
+             
+                          <label style="color: white;">Email Address:</label>
+                          <input type="email" class="form-control" formControlName = "email" placeholder="Enter the email address">
+                          <span *ngIf = "!signupForm.get('email').valid && signupForm.get('email').touched" class ="help-block">
+                            Please enter a valid email address.
+                          </span><br/><br/>
+            
+                          <label style="color: white;">Password:</label>
+                          <input type="password" class="form-control" formControlName = "password" placeholder= "Enter the password" >
+                          <span *ngIf = "!signupForm.get('password').valid && signupForm.get('password').touched" class ="help-block">
+                              Please enter a valid password.
+                          </span><br/><br/>
+            
+                          <button type="submit" class="button">Register</button>
+                      </strong>
+            
+                  </div>
+            
+                  <p align="center">Already a Registered User?
+                      <a routerLink="/login" style="color: white; background:#4CAF50; padding: 8px; border-radius: 2px; font-size: 15px;">
+                        Login Here
+                      </a>
+                  </p> 
+            
+                </form>
+              </div>
+            
+          </body>
+      </div>
+  </section>
+  <!-- Banner ends here -->
+
+
+ <!-- Footer section starts here -->
+ <footer id="Footer">
+    <div class="container">
+        <div class="social-share">
+            <ul>
+                <li><a href="https://facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-logo-wrap">
+            Design Studio &copy; 2018. Designed by Byju
+        </div>
+    </div>
+</footer>
+<!-- Footer section ends here -->
